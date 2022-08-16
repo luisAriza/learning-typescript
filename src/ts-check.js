@@ -75,6 +75,6 @@
 //     name: "Nicolas",
 //     lastName: "Molina",
 //   };
-//   const rta = `${person} + ${limit}`;
+//   const rta = `${person.name} ${person.lastName}`;
 //   console.log(rta);
 // };
