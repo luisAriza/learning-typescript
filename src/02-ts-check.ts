@@ -1,6 +1,6 @@
 (() => {
   const myCart = [];
-  const products = [];
+  const products: number[] = [];
   const limit = 2;
 
   async function getProducts() {
@@ -10,14 +10,14 @@
     const data = await rta.json();
     products.concat(data);
   }
-  function getTotal() {
+  function getTotal(): number {
     let total = 0;
     for (let i = 0; i < products.length; i++) {
       total += products[i];
     }
     return total;
   }
-  function addProduct(index) {
+  function addProduct(index: number): void {
     if (getTotal() <= limit) {
       myCart.push(products[index]);
     }
