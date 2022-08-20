@@ -7,7 +7,7 @@
 
   async function getProducts() {
     const rta = await fetch('http://api.escuelajs.co/api/v1/products', {
-      mehtod: 'GET'
+      method: 'GET'
     });
     const data = await rta.parseJson();
     products.concat(data);
