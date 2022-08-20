@@ -1,21 +1,15 @@
 export const createProduct = (
   id: string | number,
-  // Parámetros opcionales
-  isNew?: boolean,
-  stock?: number
+  // Parámetros por defecto
+  isNew: boolean = true,
+  stock: number = 10
 ) => {
   return {
     id,
-    // isNew: isNew || true,
-    // stock: stock || 10
-    isNew: isNew ?? true,
-    stock: stock ?? 10
+    isNew,
+    stock
   }
 }
-
-// 0 === false
-// '' === false
-// false === false
 
 const p1 = createProduct(1, true)
 console.log("p1", p1);
