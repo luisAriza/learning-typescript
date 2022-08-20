@@ -13,3 +13,5 @@ const luisUser: User = {
   username: "Luis Ariza",
   role: ROLES.ADMIN
 };
+
+console.log("luisUser", luisUser);
