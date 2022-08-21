@@ -36,7 +36,9 @@ updateProduct(products[0].id, {
 
 findProducts({
   stock: 10,
-  color: "red"
+  color: "red",
+  isNew: true,
+  tags: ["Videojuegos", "Tecnología"]
 })
 
 console.log("products: ", products);
