@@ -1,10 +1,8 @@
+import { BaseModel } from "../base.model"
 import { Product } from "../products/product.model"
 import { User } from "../users/user.model"
 
-export interface Order {
-  id: number | string
-  createAt: Date
-  updateAt: Date
+export interface Order extends BaseModel {
   products: Product[]
   user: User
 }
