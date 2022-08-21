@@ -1,7 +1,7 @@
 import { faker } from '@faker-js/faker';
-import { products, addProduct, updateProduct } from "./products/product.service";
+import { products, addProduct, updateProduct, findProducts } from "./products/product.service";
 
-for (let i = 0; i < 40; i++) {
+for (let i = 0; i < 10; i++) {
   addProduct({
     // id: faker.datatype.uuid(),
     title: faker.commerce.productName(),
@@ -32,6 +32,11 @@ updateProduct(products[0].id, {
   title: "Pedalboard",
   stock: 1,
   weight: "2kg"
+})
+
+findProducts({
+  stock: 10,
+  color: "red"
 })
 
 console.log("products: ", products);
