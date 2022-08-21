@@ -17,7 +17,7 @@ export const addProduct = (data: CreateProductDto): void => {
   products.push(newProduct)
 }
 
-export const updateProduct = (id: string, changes: UpdateProductDto): Product => {
+export const updateProduct = (id: Product["id"], changes: UpdateProductDto): Product => {
   const index = products.findIndex(e => e.id === id)
   const prevData = products[index]
 
