@@ -3,7 +3,7 @@ import { products, addProduct } from "./products/product.service";
 
 for (let i = 0; i < 40; i++) {
   addProduct({
-    id: faker.datatype.uuid(),
+    // id: faker.datatype.uuid(),
     title: faker.commerce.productName(),
     image: faker.image.imageUrl(),
     description: faker.commerce.productDescription(),
@@ -22,8 +22,9 @@ for (let i = 0; i < 40; i++) {
       faker.commerce.productAdjective(),
       faker.commerce.productMaterial()
     ],
-    createAt: faker.date.recent(),
-    updateAt: faker.date.recent(),
+    // createAt: faker.date.recent(),
+    // updateAt: faker.date.recent(),
+    weight: `${faker.random.numeric(2)}kg`
   })
 }
 
