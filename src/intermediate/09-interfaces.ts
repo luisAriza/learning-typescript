@@ -4,16 +4,16 @@ type Sizes = "S" | "M" | "L" | "XL"
 //   id: number | string,
 //   title: string,
 //   price: number,
-//   stock: number
+//   stock: number,
 //   size?: Sizes
 // }
 
 interface Product {
-  id: number | string,
-  title: string,
-  price: number,
-  stock: number
-  size?: Sizes
+  id: number | string;
+  title: string;
+  price: number;
+  stock: number;
+  size?: Sizes;
 }
 
 const products: Product[] = []
