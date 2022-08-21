@@ -1,5 +1,5 @@
 import { faker } from '@faker-js/faker';
-import { products, addProduct } from "./products/product.service";
+import { products, addProduct, updateProduct } from "./products/product.service";
 
 for (let i = 0; i < 40; i++) {
   addProduct({
@@ -11,7 +11,7 @@ for (let i = 0; i < 40; i++) {
     stock: faker.random.numeric(3),
     color: faker.color.human(),
     category: {
-      id: faker.datatype.number(),
+      id: faker.datatype.uuid(),
       name: faker.commerce.department(),
       createAt: faker.date.recent(),
       updateAt: faker.date.recent()
@@ -27,5 +27,11 @@ for (let i = 0; i < 40; i++) {
     weight: `${faker.random.numeric(2)}kg`
   })
 }
+
+updateProduct(products[0].id, {
+  title: "Pedalboard",
+  stock: 1,
+  weight: "2kg"
+})
 
 console.log("products: ", products);
