@@ -5,6 +5,10 @@ import { CreateProductDto, UpdateProductDto } from "../dtos/product.dto"
 export class ProductMemoryService {
   private products: Product[] = []
 
+  get showProducts(): Product[] {
+    return this.products
+  }
+
   create(data: CreateProductDto): Product {
     const newProduct = {
       ...data,
@@ -19,7 +23,7 @@ export class ProductMemoryService {
     return this.add(newProduct)
   }
 
-  add(product: Product) {
+  private add(product: Product) {
     this.products.push(product)
 
     return product
@@ -36,7 +40,7 @@ export class ProductMemoryService {
 
     return this.products[index]
   }
-  findId(id: Product["id"]) {
+  find(id: Product["id"]) {
     return this.products.find(e => e.id === id)
   }
 }
