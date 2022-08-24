@@ -11,7 +11,7 @@ export abstract class Animal {
   }
 }
 
-const donald = new Animal("pato")
+// const donald = new Animal("pato")s
 
 donald.move()
 console.log(donald.greeting())
