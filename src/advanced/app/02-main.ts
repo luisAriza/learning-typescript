@@ -10,7 +10,7 @@ productService.create({
   images: []
 })
 
-const products = productService.showProducts
+const products = productService.getAll()
 const productId = products[0].id
 
 productService.update(productId, {
